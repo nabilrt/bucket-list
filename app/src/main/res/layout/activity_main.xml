@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/text_view_bucket_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="My Bucket List"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_things_to_do"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/text_view_bucket_list"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_view_things_to_do"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/things_to_do"
+                    >
+
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/text_view_things_to_do"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:text="Things to Do" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_places_to_visit"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/card_view_things_to_do"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_view_places_to_visit"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/places_to_visit"
+                    >
+
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/text_view_places_to_visit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:text="Places to Visit" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>
