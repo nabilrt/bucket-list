@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NabilBuckets">
         <activity
+            android:name=".BucketItemDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".PlacesToVisitActivity"
             android:exported="false" />
         <activity

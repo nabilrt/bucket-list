@@ -1,5 +1,6 @@
 package com.abidnabil.nabilbuckets;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +14,8 @@ public class BucketListItemAdapter extends RecyclerView.Adapter<BucketListItemAd
 
     BucketListItem[] bucketListItems;
 
-    BucketListItemAdapter(BucketListItem[] bucketListItems){
-        this.bucketListItems=bucketListItems;
+    BucketListItemAdapter(BucketListItem[] bucketListItems) {
+        this.bucketListItems = bucketListItems;
     }
 
     @NonNull
@@ -46,6 +47,18 @@ public class BucketListItemAdapter extends RecyclerView.Adapter<BucketListItemAd
             bucketListItemImage = itemView.findViewById(R.id.image_view_bucket_item_image);
             bucketListItemName = itemView.findViewById(R.id.text_view_bucket_item_name);
             bucketListItemDescription = itemView.findViewById(R.id.text_view_bucket_item_description);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int adapterPosition = getBindingAdapterPosition();
+                    if (adapterPosition == RecyclerView.NO_POSITION) return;
+                    Intent intent = new Intent(v.getContext(), BucketItemDetailsActivity.class);
+                    intent.putExtra("ITEM_ID", bucketListItems[adapterPosition].itemId);
+                    v.getContext().startActivity(intent);
+
+                }
+            });
         }
 
         public void bind(BucketListItem bucketListItem) {

@@ -21,10 +21,10 @@ public class ThingsToDoActivity extends AppCompatActivity {
         RecyclerView thingsToDoView = findViewById(R.id.recycler_view_things_to_do_list);
 
         BucketListItem[] thingsToDoList = {
-                new BucketListItem(1, "Programming", "Want to Do More Programming", R.drawable.programming),
-                new BucketListItem(2, "Networking", "Want to increase my networking skills", R.drawable.networking),
-                new BucketListItem(3, "Workout", "Want to increase my fitness", R.drawable.workout),
-                new BucketListItem(4, "Own Company", "Want to open my own company", R.drawable.own_company)
+                new BucketListItem(5, "Programming", "Want to Do More Programming", R.drawable.programming),
+                new BucketListItem(6, "Networking", "Want to increase my networking skills", R.drawable.networking),
+                new BucketListItem(7, "Workout", "Want to increase my fitness", R.drawable.workout),
+                new BucketListItem(8, "Own Company", "Want to open my own company", R.drawable.own_company)
         };
 
         BucketListItemAdapter bucketListItemBucketListItemAdapter = new BucketListItemAdapter(thingsToDoList);
